@@ -1,0 +1,25 @@
+#pi_extension_box {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 500px;
+    height: 70px;
+    border: 1px solid #999;
+    padding: 5px;
+    background-color: #efefef;
+    z-index: 9001;
+}
+
+#pi_extension_box #logo {
+    height: 70px;
+    float: left;
+}
+
+#pi_extension_box #message {
+    float: left;
+    margin-left: 10px;
+}
+
+#pi_extension_box #close {
+    float: right;
+}

@@ -1,11 +1,13 @@
 function displayBanner() {
-    document.body.innerHTML = '\
-<div style="margin: 0; padding: 0; position: relative; top: 0; left: 0; display: block; z-index: 1000">\
-    <div style="margin: 0; padding: 10px; border-bottom: 1px solid #000000; font-weight: normal; text-align: left">\
-        <p>blab</p>\
-    </div>\
-</div>\
-    ' + document.body.innerHTML;
+
+    var banner = '<div id="pi_extension_box">' +
+        '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="logo" src="' + self.options.pilogoImage + '"></a>' +
+        '<div id="message">gchq is bad k?</div>' +
+        '<div id="close"><a href="#"><img src="' + self.options.closeImage + '"></a></div>' +
+        '</div>';
+
+    $('body').append(banner);
+
 }
 
 $(document).ready(function() {
