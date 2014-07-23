@@ -19,7 +19,7 @@ function getResources() {
         }
 
         urls.forEach(function(url) {
-            if (typeof(url) != 'undefined' && resources.indexOf(url) == -1) {
+            if (typeof(url) !== 'undefined' && resources.indexOf(url) == -1) {
                 resources.push(url);
             }
         });
