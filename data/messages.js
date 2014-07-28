@@ -8,5 +8,6 @@ messages = {
 
     // site-specific messages
     'google.com': 'GCHQ believes it has the right to intercept any searches made in Google and note these in your file. Be very careful what search for or you can demand a secure Internet for all.',
+    'google.co.uk': 'GCHQ believes it has the right to intercept any searches made in Google and note these in your file. Be very careful what search for or you can demand a secure Internet for all.',
 
 };
