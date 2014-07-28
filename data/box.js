@@ -11,10 +11,28 @@ function displayBox(message) {
 }
 
 function determineMessage() {
+
+    for (var hostname in messages) {
+        if (matchesHostname(hostname)) {
+            console.log(hostname);
+            return messages[hostname];
+        }
+    }
+
     if (hostType === 1) {
         return messages['generic_t1'];
     } else if (hostType == 2) {
         return messages['generic_t2'];
+    }
+
+}
+
+function matchesHostname(hostname) {
+    if (hostname == window.location.hostname ||
+        window.location.hostname.indexOf('.' + hostname, window.location.hostname.length - ('.' + hostname).length) !== -1) {
+        return true;
+    } else {
+        return false;
     }
 }
 

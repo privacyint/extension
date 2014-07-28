@@ -8,6 +8,10 @@
     padding: 5px;
     background-color: #efefef;
     z-index: 9001;
+    font-size: 10pt;
+    font-family: Arial;
+    color: black;
+    line-height: normal;
 }
 
 #pi_extension_box #logo {
@@ -18,6 +22,7 @@
 #pi_extension_box #message {
     float: left;
     margin-left: 10px;
+    width: 370px;
 }
 
 #pi_extension_box #close {
