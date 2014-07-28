@@ -1,9 +1,13 @@
 function displayBox(message) {
 
+    if ($('#pi_extension_box').length > 0) {
+        $('#pi_extension_box').remove();
+    }
+
     var box = '<div id="pi_extension_box">' +
-        '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="logo" src="' + self.options.pilogoImage + '"></a>' +
-        '<div id="message">' + message + '</div>' +
-        '<div id="close"><a href="#"><img src="' + self.options.closeImage + '"></a></div>' +
+        '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '"></a>' +
+        '<div id="pi_extension_box_message">' + message + '</div>' +
+        '<div id="pi_extension_box_close"><a href="#"><img src="' + self.options.closeImage + '"></a></div>' +
         '</div>';
 
     $('body').append(box);
@@ -14,7 +18,6 @@ function determineMessage() {
 
     for (var hostname in messages) {
         if (matchesHostname(hostname)) {
-            console.log(hostname);
             return messages[hostname];
         }
     }
@@ -45,6 +48,10 @@ $(document).ready(function() {
 self.port.on('displayBoxResponse', function(response) {
     if (response > 0) {
         hostType = response;
-        displayBox(determineMessage());
+        if (runRules()) {
+            return;
+        } else {
+            displayBox(determineMessage());
+        }
     }
 });

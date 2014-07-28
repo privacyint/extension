@@ -14,17 +14,17 @@
     line-height: normal;
 }
 
-#pi_extension_box #logo {
+#pi_extension_box #pi_extension_box_logo {
     height: 70px;
     float: left;
 }
 
-#pi_extension_box #message {
+#pi_extension_box #pi_extension_box_message {
     float: left;
     margin-left: 10px;
     width: 390px;
 }
 
-#pi_extension_box #close {
+#pi_extension_box #pi_extension_box_close {
     float: right;
 }
