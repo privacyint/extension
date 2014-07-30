@@ -1,21 +1,18 @@
 function displayBox(message) {
+    if ($('#pi_extension_box').length === 0) {
+        var box = '<div id="pi_extension_box">' +
+            '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '"></a>' +
+            '<div id="pi_extension_box_message"></div>' +
+            '<div id="pi_extension_box_close"><a href="#"><img src="' + self.options.closeImage + '"></a></div>' +
+            '</div>';
 
-    if ($('#pi_extension_box').length > 0) {
-        $('#pi_extension_box').remove();
+        $('body').append(box);
     }
 
-    var box = '<div id="pi_extension_box">' +
-        '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '"></a>' +
-        '<div id="pi_extension_box_message">' + message + '</div>' +
-        '<div id="pi_extension_box_close"><a href="#"><img src="' + self.options.closeImage + '"></a></div>' +
-        '</div>';
-
-    $('body').append(box);
-
+    $('#pi_extension_box_message').text(message);
 }
 
 function determineMessage() {
-
     for (var hostname in messages) {
         if (matchesHostname(hostname)) {
             return messages[hostname];
@@ -27,7 +24,6 @@ function determineMessage() {
     } else if (hostType == 2) {
         return messages['generic_t2'];
     }
-
 }
 
 function matchesHostname(hostname) {

@@ -1,9 +1,7 @@
 function getResources() {
-
     var resources = Array();
 
     $('*').each(function() {
-
         var urls = Array();
 
         urls.push($(this).attr('src'));
@@ -23,15 +21,12 @@ function getResources() {
                 resources.push(url);
             }
         });
-
     });
 
     return resources;
-
 }
 
 function getResourcesHostnames() {
-
     var hostnames = Array();
 
     getResources().forEach(function(resource) {
@@ -42,11 +37,9 @@ function getResourcesHostnames() {
     });
 
     return hostnames;
-
 }
 
 function getExternalResourcesHostnames() {
-
     var hostnames = getResourcesHostnames();
     var indexOfCurrentHostname = hostnames.indexOf(window.location.hostname);
 
@@ -55,7 +48,6 @@ function getExternalResourcesHostnames() {
     }
 
     return hostnames;
-
 }
 
 function getLocation(href) {
