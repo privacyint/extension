@@ -28,3 +28,7 @@
 #pi_extension_box #pi_extension_box_close {
     float: right;
 }
+
+#pi_extension_box #pi_extension_box_close img {
+    cursor: pointer;
+}

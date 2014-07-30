@@ -3,13 +3,20 @@ function displayBox(message) {
         var box = '<div id="pi_extension_box">' +
             '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '"></a>' +
             '<div id="pi_extension_box_message"></div>' +
-            '<div id="pi_extension_box_close"><a href="#"><img src="' + self.options.closeImage + '"></a></div>' +
+            '<div id="pi_extension_box_close"><img src="' + self.options.closeImage + '"></div>' +
             '</div>';
 
         $('body').append(box);
+
+        $('#pi_extension_box #pi_extension_box_close img').click(closeBox);
     }
 
-    $('#pi_extension_box_message').text(message);
+    $('#pi_extension_box #pi_extension_box_message').text(message);
+}
+
+function closeBox() {
+    self.port.emit('closeHostname', window.location.hostname);
+    $('#pi_extension_box').remove();
 }
 
 function determineMessage() {
