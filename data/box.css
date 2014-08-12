@@ -14,6 +14,17 @@
     line-height: normal;
 }
 
+#pi_extension_box img {
+    width: auto;
+    margin: 0;
+    text-align: initial;
+    top: initial;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    position: static;
+}
+
 #pi_extension_box #pi_extension_box_footer #pi_extension_box_logo {
     height: 35px;
     float: left;
