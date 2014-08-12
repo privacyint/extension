@@ -8,7 +8,7 @@ function displayBox(message) {
             '</div>' +
 
             '<div id="pi_extension_box_footer">' +
-            '<img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '">' +
+            '<a href="https://www.privacyinternatiaonl.org"><img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '"></a>' +
             '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_donate" src="' + self.options.donateImage + '"></a>' +
             '</div>' +
 
