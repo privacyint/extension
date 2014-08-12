@@ -1,9 +1,17 @@
 function displayBox(message) {
     if ($('#pi_extension_box').length === 0) {
         var box = '<div id="pi_extension_box">' +
-            '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '"></a>' +
+
+            '<div id="pi_extension_box_body">' +
             '<div id="pi_extension_box_message"></div>' +
             '<div id="pi_extension_box_close"><img src="' + self.options.closeImage + '"></div>' +
+            '</div>' +
+
+            '<div id="pi_extension_box_footer">' +
+            '<img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '">' +
+            '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_donate" src="' + self.options.donateImage + '"></a>' +
+            '</div>' +
+
             '</div>';
 
         $('body').append(box);

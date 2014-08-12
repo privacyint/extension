@@ -3,32 +3,39 @@
     bottom: 5px;
     right: 5px;
     width: 520px;
-    height: 70px;
-    border: 1px solid #999;
-    padding: 5px;
-    background-color: #efefef;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    background-color: white;
     z-index: 9001;
-    font-size: 10pt;
+    font-size: 12pt;
     font-family: Arial;
     color: black;
     line-height: normal;
 }
 
-#pi_extension_box #pi_extension_box_logo {
-    height: 70px;
+#pi_extension_box #pi_extension_box_footer #pi_extension_box_logo {
+    height: 35px;
     float: left;
 }
 
-#pi_extension_box #pi_extension_box_message {
-    float: left;
-    margin-left: 10px;
-    width: 390px;
-}
-
-#pi_extension_box #pi_extension_box_close {
+#pi_extension_box #pi_extension_box_footer #pi_extension_box_donate {
+    height: 35px;
     float: right;
 }
 
-#pi_extension_box #pi_extension_box_close img {
+#pi_extension_box #pi_extension_box_body #pi_extension_box_message {
+    float: left;
+    width: 495px;
+    height: 75px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#pi_extension_box #pi_extension_box_body #pi_extension_box_close {
+    float: right;
+}
+
+#pi_extension_box #pi_extension_box_body #pi_extension_box_close img {
     cursor: pointer;
 }
