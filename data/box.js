@@ -9,7 +9,7 @@ function displayBox(message) {
 
             '<div id="pi_extension_box_footer">' +
             '<a href="https://www.privacyinternational.org" target="_blank"><img id="pi_extension_box_logo" src="' + self.options.pilogoImage + '"></a>' +
-            '<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_donate" src="' + self.options.donateImage + '"></a>' +
+            //'<a href="https://www.privacyinternational.org/donate" target="_blank"><img id="pi_extension_box_donate" src="' + self.options.donateImage + '"></a>' +
             '</div>' +
 
             '</div>';
@@ -35,7 +35,7 @@ function determineMessage() {
     }
 
     if (hostType === 1) {
-        return messages['generic_t1'];
+        return messages['generic_t1'][Math.floor(Math.random()*messages['generic_t1'].length)];
     } else if (hostType == 2) {
         return messages['generic_t2'];
     }
