@@ -35,7 +35,7 @@ function determineMessage() {
     }
 
     if (hostType === 1) {
-        return messages['generic_t1'];
+        return messages['generic_t1'][Math.floor(Math.random()*messages['generic_t1'].length)];
     } else if (hostType == 2) {
         return messages['generic_t2'];
     }
