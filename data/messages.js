@@ -1,5 +1,8 @@
 messages = {
 
+    // site-unspecific messages (site is "internal")
+    generic_t0: "It seems this site is hosted within the UK, so in theory GCHQ needs an individual warrant to intercept your communicationas. But be careful, since much of the UK's internet traffic is routed outside its territory and can be intercepted without an indivdual warrant.",
+
     // site-unspecific messages (site is "external")
     generic_t1: [
         "Psst! It seems this site is hosted outside the UK. GCHQ have byzantine rules that say if the site your visiting is outside the UK, they don't need an individual warrant to intercept your communications.",

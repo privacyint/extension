@@ -1,8 +1,8 @@
 {
-  "name": "extension",
-  "title": "extension",
+  "name": "gchqalert",
+  "title": "GCHQ Alert",
   "id": "jid1-96rs3vyuTthmNQ",
-  "description": "a basic add-on",
+  "description": "",
   "author": "",
   "license": "MPL 2.0",
   "version": "0.1"
