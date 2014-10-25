@@ -34,7 +34,9 @@ function determineMessage() {
         }
     }
 
-    if (hostType === 1) {
+    if (hostType === 0) {
+        return messages['generic_t0'];
+    } else if (hostType === 1) {
         return messages['generic_t1'][Math.floor(Math.random()*messages['generic_t1'].length)];
     } else if (hostType == 2) {
         return messages['generic_t2'];
@@ -57,7 +59,7 @@ $(document).ready(function() {
 });
 
 self.port.on('displayBoxResponse', function(response) {
-    if (response > 0) {
+    if (response >= 0 && response <= 2) {
         hostType = response;
         if (runRules()) {
             return;
