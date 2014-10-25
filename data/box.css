@@ -12,6 +12,7 @@
     font-family: Arial;
     color: black;
     line-height: normal;
+    box-sizing: content-box;
 }
 
 #pi_extension_box img {
