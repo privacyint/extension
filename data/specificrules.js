@@ -6,7 +6,7 @@ function runRules() {
 }
 
 function googleRule() {
-    messageNum = Math.floor(Math.random() * 3);
+    messageNum = 2;//Math.floor(Math.random() * 3);
     if ($('#gbqfq').length > 0 &&
         $('#gbqfq').val().length > 0) {
         displayBox(googleMessage($('#gbqfq').val(), messageNum));
